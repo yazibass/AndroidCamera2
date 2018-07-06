@@ -1,0 +1,14 @@
+path: ./app/relaesekey
+
+keyAlias 'camera2_apk_key'
+keyPassword 'camera2'
+storeFile file('./releasekey')
+storePassword 'camera2'
+
+Validity(years): 25
+First and Last Name:android
+Organizational Unit:android
+Organization:android
+City or Locality:shenzhen
+State or Province:guangdong
+Country Code(XX):cn

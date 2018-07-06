@@ -1,6 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        release_config {
+            keyAlias 'camera2_apk_key'
+            keyPassword 'camera2'
+            storeFile file('./releasekey')
+            storePassword 'camera2'
+        }
+    }
     compileSdkVersion 27
     defaultConfig {
         applicationId "com.android.camera2"
@@ -14,6 +22,7 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release_config
         }
     }
     sourceSets {
@@ -27,11 +36,10 @@ android {
     lintOptions {
         abortOnError false
     }
-
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.android.support:support-v13:27.1.1'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'

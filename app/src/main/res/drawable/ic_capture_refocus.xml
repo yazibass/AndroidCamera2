@@ -24,6 +24,6 @@
     <item>
         <bitmap
             android:gravity="center"
-            android:src="@drawable/ic_capture_refocus" />
+            android:src="@drawable/ic_capture_refocus_o" />
     </item>
 </selector>
